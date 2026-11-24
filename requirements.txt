@@ -1,0 +1,7 @@
+anthropic>=0.40
+numpy>=1.24
+pillow>=10.0
+# Optional:
+# pydicom>=2.4    # DICOM input for prepare_golden
+# redivis         # Step 0 data access (fetch_redivis.py)
+# pandas          # Step 0 only

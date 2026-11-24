@@ -1,0 +1,7 @@
+.env
+data/
+golden/
+golden_*/
+runs/
+__pycache__/
+*.pyc

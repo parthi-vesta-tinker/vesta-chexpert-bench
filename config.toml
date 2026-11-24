@@ -1,0 +1,32 @@
+[model]
+name = "claude-opus-5-5"
+max_tokens = 16000
+
+[model.extra]
+# Extra Messages API params passed through verbatim (reasoning/effort: SPEC decision O5).
+# Empty = model defaults. Whatever is set here is recorded in run_config.json and changes the run identity.
+
+[run]
+prompt = "prompts/v1.txt"
+concurrency = 4
+parse_retries = 1
+api_max_retries = 5
+batch_max_mb = 100          # conservative chunk size per batch submission
+poll_seconds = 60
+
+[score]
+threshold = 50
+bootstrap = 1000
+seed = 42
+max_parse_failure_rate = 0.02
+misses_per_finding = 10
+
+[cost]                      # USD per million tokens. ESTIMATES from third-party pages: check current pricing
+input_per_mtok = 4.0
+output_per_mtok = 20.0
+batch_discount = 0.5
+
+[baseline]
+# SPEC decision O3. Fill only from the CheXpert paper, with the table/figure reference, e.g.:
+# source = "Irvin et al. 2019, Table N (validation set)"
+# Atelectasis = 0.00

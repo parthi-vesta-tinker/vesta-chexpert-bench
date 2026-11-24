@@ -1,0 +1,13 @@
+These images are one chest X-ray study. Each image is labeled with its view.
+
+For each finding below, give the probability (0-100) that it is present, based only on the images.
+
+- Atelectasis
+- Cardiomegaly
+- Consolidation
+- Edema
+- Pleural Effusion
+- No Finding (no abnormality; support devices alone still count as No Finding)
+
+Reply with only this JSON, using whole numbers from 0 to 100:
+{"Atelectasis": _, "Cardiomegaly": _, "Consolidation": _, "Edema": _, "Pleural Effusion": _, "No Finding": _}
